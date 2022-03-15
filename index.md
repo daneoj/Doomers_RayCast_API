@@ -30,29 +30,42 @@ Users can use a RCCamera in conjunction with a GridMap object of textured Tiles 
 
 ## RCCamera API:
 RCCamera(wcPos, viewPortArray)
+
 setViewPort(viewPortArray)
 - Sets viewport of the RC_Camera (same as the Camera class)
 
 getViewPort()
 - Returns viewport array.
 
-setRayCast(fov, resolution)
-- Sets total angle that raycasts will be performed between (higher number = wider FOV)
-- Sets the number of raycasts that will be performed (we do X raycasts from left to right, along the horizon line (Raycasting method does not support height)
+getFOV()
 
-setRCrot(rot)
+setFOV(fov)
+- Gets/Sets total angle that raycasts will be performed between (higher number = wider FOV)
+
+getResolution()
+
+setResolution(res)
+- Gets/Sets the number of raycasts that will be performed (we do X raycasts from left to right, along the horizon line (Raycasting method does not support height)
+
+setRayCasterAngle(rot)
 - Sets the direction that the camera is facing. (the direction raycasts will originate from)
 
-getRCrot()
+getRayCasterAngle()
 - Returns the current rotation of the camera.
 
-setRCpos(pos)
+moveRayCasterAngle(t)
+- Moves the angle of the camera by the specified amount.
+
+setRayCasterPos(pos)
 - Sets current position of the camera in WC (location that raycasts originate)
 
-getRCpos()
+getRayCasterPos()
 - Returns current position of the camera in WC.
 
-rayCast(GridMap)
+moveRayCasterForward(d)
+- Moves RCCamera’s position forward relative to its current position.
+
+Raycast(GridMap)
 - Returns an array of raycasts
 - Provides information about hit/no hit, distance of hit, which object was hit.
 - This function will be called by GridMap.draw() to determine what parts of the map should actually be drawn
@@ -65,11 +78,14 @@ DrawRays()
 - Draws the most recent Raycasts that have been stored by the RCCamera after raycasting onto a GridMap.
 
 getHorizonLine()
+
 setHorizonLine(height)
+
 moveHorizonLine(d)
 - Getter/Setter/Mover for the horizon line the raycaster renders with.
 
 getFishEye()
+
 setFishEye(b)
 - Getter/Setter for whether to use FishEye effect
 
@@ -77,6 +93,7 @@ setFishEye(b)
 ## GridMap API:
 
 RC_GridMap(2DArrayOfTiles, xWidth, yWidth, xPos, yPos)
+
 setTile(Tile, xIndex, yIndex)
 - Function for modifying one element of the gridmap
 
@@ -130,14 +147,17 @@ RC_RenderableSprite(spriteRef)
 - Constructor, sets the sprite reference associated with the class instance
 
 getScaleX()
+
 setScaleX(x)
 - Getter and setter for X scale that the RCSpriteRenderable is rendered with.
 
 getScaleY()
+
 setScaleY(y)
 - Getter and setter for Y scale that the RCSpriteRenderable is rendered with.
 
 getYOffset()
+
 setYOffset(y)
 - Getter and setter for Y offset (allows the user to control how high on the screen the RCSpriteRenderable should be rendered.
 
