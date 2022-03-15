@@ -64,6 +64,14 @@ getRayCasts()
 DrawRays()
 - Draws the most recent Raycasts that have been stored by the RCCamera after raycasting onto a GridMap.
 
+getHorizonLine()
+setHorizonLine(height)
+moveHorizonLine(d)
+- Getter/Setter/Mover for the horizon line the raycaster renders with.
+
+getFishEye()
+setFishEye(b)
+- Getter/Setter for whether to use FishEye effect
 
 
 ## GridMap API:
@@ -89,6 +97,10 @@ setPosition()
 
 setSize()
 - Returns width and height of the gridmap
+
+getTileAtIndex(x,y)
+- Returns the Tile at the specified index within the Gridmap
+
 
 ## Tile API:
 
