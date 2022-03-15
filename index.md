@@ -93,6 +93,10 @@ getFishEye()
 setFishEye(b)
 - Getter/Setter for whether to use FishEye effect
 
+getRayLengths()
+- Returns the lengths (distance to object) of the most recent raycast.
+- Useful for determining the distance from the RCCamera to an object, and used when rendering RCSpriteRenderables.
+
 
 ## GridMap API:
 
