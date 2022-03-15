@@ -1,6 +1,6 @@
-# Tutorial
-
 [Home](https://daneoj.github.io/Doomers_RayCast_API/)  [Tutorial](https://daneoj.github.io/Doomers_RayCast_API/Tutorial)  [Demos And Conclusion](https://daneoj.github.io/Doomers_RayCast_API/DemosAndConclusion)
+
+# Tutorial
 
 ## Part 1: Setting up GridMap
 
