@@ -3,6 +3,8 @@
 ### UWB CSS452 with Prof. Kelvin Sung
 ### Winter 2022
 
+[Home](https://daneoj.github.io/Doomers_RayCast_API/)  [Tutorial](https://daneoj.github.io/Doomers_RayCast_API/Tutorial)  [Demos And Conclusion](https://daneoj.github.io/Doomers_RayCast_API/DemosAndConclusion)
+
 ## Module Description:
 Our API implements several classes that will be used together to allow users of the game engine to create 3D gameplay using a Raycasting engine.
 This API allows users of the game engine to quickly implement a retro-3D look, complete with texture support, camera movement, and more.
