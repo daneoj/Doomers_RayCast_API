@@ -38,14 +38,16 @@ getViewPort()
 - Returns viewport array.
 
 getFOV()
+- Returns the total angle that raycasts will be performed between (higher number = wider FOV)
 
 setFOV(fov)
-- Gets/Sets total angle that raycasts will be performed between (higher number = wider FOV)
+- Sets total angle that raycasts will be performed between (higher number = wider FOV)
 
 getResolution()
+- Returns the number of raycasts that will be performed (we do X raycasts from left to right, along the horizon line (Raycasting method does not support height)
 
 setResolution(res)
-- Gets/Sets the number of raycasts that will be performed (we do X raycasts from left to right, along the horizon line (Raycasting method does not support height)
+- Sets the number of raycasts that will be performed
 
 setRayCasterAngle(rot)
 - Sets the direction that the camera is facing. (the direction raycasts will originate from)
@@ -78,11 +80,13 @@ DrawRays()
 - Draws the most recent Raycasts that have been stored by the RCCamera after raycasting onto a GridMap.
 
 getHorizonLine()
+- Returns the height of the horizon line the raycaster renders at.
 
 setHorizonLine(height)
+- Sets the height of the horizon line the raycaster renders at.
 
 moveHorizonLine(d)
-- Getter/Setter/Mover for the horizon line the raycaster renders with.
+- Moves the height of the horizon line the raycaster renders at.
 
 getFishEye()
 
@@ -94,29 +98,42 @@ setFishEye(b)
 
 RC_GridMap(2DArrayOfTiles, xWidth, yWidth, xPos, yPos)
 
-setTile(Tile, xIndex, yIndex)
-- Function for modifying one element of the gridmap
-
 setTiles(2DArrayOfTiles)
 - Function for setting the elements of the gridmap
 
 setPosition(xPos, yPos)
 - This allows us to change where the gridmap is located in world coordinates (WC)
 
-setSize(x, y)
-- Increases the width and height of the gridmap.
+getWidth()
+- Returns the width of the gridmap.
 
-setTile(xIndex, yIndex)
-- Returns the Tile at the specified coordinates in the gridmap.
+setWidth(w)
+- Sets the width of the gridmap.
+
+getHeight()
+- Returns the height of the gridmap.
+
+setHeight(h)
+- Sets the height of the gridmap.
 
 setPosition()
 - Returns WC offset of the gridmap (as set by SetPosition)
 
-setSize()
-- Returns width and height of the gridmap
-
 getTileAtIndex(x,y)
-- Returns the Tile at the specified index within the Gridmap
+- Returns the tile at the specified index within the Gridmap
+
+getHeightInTiles()
+- Returns the height of the 2D array of tiles
+
+getWidthInTiles()
+- Returns the width of the 2D array of tiles
+
+getHeightOfTile()
+- Returns the height of a tile in WC units (gridmap’s height in WC / height in tiles)
+
+getWidthOfTile()
+- Returns the width of a tile in WC units (gridmap’s width in WC / width in tiles)
+
 
 
 ## Tile API:
@@ -147,19 +164,22 @@ RC_RenderableSprite(spriteRef)
 - Constructor, sets the sprite reference associated with the class instance
 
 getScaleX()
+- Returns the X scale that the RCSpriteRenderable is rendered with.
 
 setScaleX(x)
-- Getter and setter for X scale that the RCSpriteRenderable is rendered with.
+- Sets the X scale that the RCSpriteRenderable is rendered with.
 
 getScaleY()
+- Returns the Y scale that the RCSpriteRenderable is rendered with.
 
 setScaleY(y)
-- Getter and setter for Y scale that the RCSpriteRenderable is rendered with.
+- Sets the Y scale that the RCSpriteRenderable is rendered with.
 
 getYOffset()
+- Returns Y offset (how high on the screen the RCSpriteRenderable should be rendered)
 
 setYOffset(y)
-- Getter and setter for Y offset (allows the user to control how high on the screen the RCSpriteRenderable should be rendered.
+- Sets Y offset
 
 draw(RC_Camera, position)
 - Draws the sprite if visible (RC_Camera’s current raycasts + position + the sprite’s position are both taken into account)
