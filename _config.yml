@@ -1,6 +1,6 @@
 theme: jekyll-theme-slate
 title: Doomers RayCast API
 header_pages:
-- index.md
-- DemosAndConclusion.md
-- Tutorial.md
+  - index.md
+  - DemosAndConclusion.md
+  - Tutorial.md
