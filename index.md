@@ -61,6 +61,11 @@ getRayCasts()
 - Returns most recent Raycast
 - (used by RC_RenderableSprite.draw() to determine whether the sprite is visible)
 
+DrawRays()
+- Draws the most recent Raycasts that have been stored by the RCCamera after raycasting onto a GridMap.
+
+
+
 ## GridMap API:
 
 RC_GridMap(2DArrayOfTiles, xWidth, yWidth, xPos, yPos)
@@ -84,9 +89,6 @@ setPosition()
 
 setSize()
 - Returns width and height of the gridmap
-
-draw(RC_Camera)
-- This will have RC_Camera perform raycasts to determine what is drawn, and then draw them to that RC_Camera
 
 ## Tile API:
 
