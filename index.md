@@ -105,15 +105,24 @@ getTileAtIndex(x,y)
 ## Tile API:
 
 Tile(topTexture, bottomTexture, leftTexture, rightTexture)
+
 getTopTexture()
+
 setTopTexture(tex)
+
 getBottomTexture()
+
 setBottomTexture(tex)
+
 getLeftTexture()
+
 setLeftTexture(tex)
+
 getRightTexture()
+
 setRightTexture(tex)
 - Setters and getters for the textures of each side of a tile (getters utilized by RCCamera when determining which texture to render onto a tile)
+
 
 ## RCSpriteRenderable API:
 
